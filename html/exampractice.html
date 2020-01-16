@@ -1,0 +1,153 @@
+<html lang="en">
+    <head>
+        <meta charset = "utf-8">
+        <link rel="stylesheet" type="text/css" href="exampractice.css"/>
+        <style type="text/css">
+            ol{
+                color:aqua;
+                font-size:200%;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            li{
+                color:coral;
+                font-size:40%;
+                font-family:'Courier New', Courier, monospace;
+            }
+        </style>
+        <script type="text/javascript">
+            window.alert("Welcome to Exam Practice!");
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function confirmForm()
+            {
+                window.confirm("Submit form?");
+                return confirmPassword();
+            }
+            function confirmPassword()
+            {
+                var pw = document.forms["testform"]["pw"].value;
+                var vpw = document.forms["testform"]["vpw"].value;
+                if(pw != vpw){
+                    window.alert("Passwords must match!");
+                    return false;
+                }
+            }
+            function alertMessage()
+            {
+                window.alert("Checked!");
+                Document.write("Successful Check!");
+            }
+        </script>
+        <a href=http://www.towson.edu>Towson Website</a>
+        <br><a href="#jumptoid">ID Jump Test</a>
+        <br><ol>LIST 1 (with embedded CSS test)
+            <li>Ordered Item 1</li>
+            <ol>
+                <li>Sublist Item 1</li>
+                <li>Sublist Item 2</li>
+            </ol>
+            <li>Ordered Item 2</li>
+            <li>Ordered Item 3</li>
+        </ol>
+        <h2><a href = "http://inside.towson.edu">Link Test</a></h2>
+
+        <h3>Email Test</h3>
+        <a href="mailto:andrewsknick@gmail.com?subject=Email%20Test">andrewsknick@gmail.com</a>
+        
+        <h3>Image Test</h3>
+        <a href="http://theoffice.wikia.com/wiki/Michael_Klump"><img src="https://vignette.wikia.nocookie.net/theoffice/images/d/d9/Michaelklump.jpg/revision/latest?cb=20100327171359"/></a>
+        
+        <h3>Table Test</h3>
+        <table>
+            <caption>Test Table 1</caption>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                    <th colspan="2">Column 4 and 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5"></td>
+                </tr>
+            </tfoot>
+        </table>
+        <br><table>
+            <caption>Test Table 2</caption>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th colspan="2"> Col. 1</th>
+                    <th colspan="2"> Col. 2</th>
+                    <th colspan="2"> Col. 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr></tr>
+                <tr>
+                    <td colspan="3" rowspan="2">C1R1</td>
+                    <td colspan="2">C2R1</td>
+                    <td colspan="2">C3R1</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>C2R2</td>
+                    <td>C2R3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Form Test</h2>
+        <form name="testform" method="get" onsubmit="return confirmForm()" action="results.html">
+            <fieldset class="frm">
+                <h4>Textbox</h4><input id="txbx" placeholder="Text Here" required="required" type="text">
+                <h4>Password</h4><input name="pw" placeholder="Password Here" required="required" type="password">
+                <h4>Verify Password</h4>
+                <input name="vpw" placeholder="Confirm Password" required="required" type="password">
+
+            </fieldset>
+            <h4>Checkbox</h4><input id="cb" name="cbops" onclick="return alertMessage()" type="checkbox">
+            <h4>Radio Group Buttons</h4><input type="radio" id="opt1" required="required" name="rgrouptest">
+            <input type="radio" id="opt2" name="rgrouptest">
+            <input type="radio" id="opt3" name="rgrouptest">
+            <input type="radio" id="opt4" name="rgrouptest">
+
+            <h4>Radio Individual Buttons</h4><input type="radio" id="r1" name="r1" required="required">
+            <input type="radio" id="r2" name="r2">
+            <input type="radio" id="r3" name="r3">
+            <input type="radio" id="r4" name="r4">
+
+            <h4>Select Test</h4>
+            <select required="required" placeholder="select" name="selection">
+                <option>Option1</option><option>Option2</option><option>Option3</option>
+            </select>
+
+            <h4>Email Test</h4>
+            <input required="required" class="frm" placeholder="Email Here" type="email">
+
+            <h4>Telephone</h4>
+            <input required="required" class="frm" placeholder="Telephone Here" type="tel">
+
+            <h4>Submit Test</h4>
+            <input value="SUBMIT!" class="frm" type="submit">
+        </form>
+
+        <h3 id="jumptoid">ID Jump</h3>
+
+        <h3>CSS Inline Test</h3>
+        <p style="color:red;"">This paragraph will be red!</p>
+    </body>
+</html>

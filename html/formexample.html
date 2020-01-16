@@ -1,0 +1,28 @@
+<!--action is just where the page goes after filling out the form
+    get request will have all data in your form sent through the URL
+    post request will send data through the body, but is a bit slower,
+     usually for sensitive data
+-->
+
+<form method="post" action="home.html">
+    <!--p tag vs. label tag, p tag is a block element (things below),
+     label is in-line (on the same line)-->
+    <label></label>
+    <input type="text">
+    <input type="password">
+
+    <!--
+    with a radio you only want to be able to choose one at a time
+    make them mutually exclusive by giving them the same name-->
+<input type="radio" name="name1">
+<input type="radio" name="name1">
+<input type="radio" name="name1">
+<!--required makes sure there's some text in an element before submission-->
+<textarea required="required" placeholder="EnterText"> </textarea>
+<select></select>
+<!--submit will send everything in your form to the next page (action)-->
+<input type="submit">
+<!--reset will automatically reset every text in the field, not one at a time-->
+<input type="reset">
+<input type="button">
+</form>

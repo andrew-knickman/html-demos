@@ -1,0 +1,21 @@
+html{
+    background-color:royalblue;
+    color:white;
+    border-color:black;
+}
+h4:first-letter{
+    font-size:200%;
+}
+#jumptoid{
+    color:yellow;
+    font-variant-caps: all-small-caps;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 150%;
+}
+h2, input, .frm{
+    color:red;
+    background-color:grey;
+}
+form h4{
+    color:greenyellow;
+}
